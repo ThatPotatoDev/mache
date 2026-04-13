@@ -7,7 +7,7 @@ plugins {
 val generateReportsProperty = providers.gradleProperty("generateReports")
 mache {
     minecraftVersion = "26.1.2"
-    minecraftJarType = MinecraftJarType.SERVER
+    minecraftJarType = MinecraftJarType.CLIENT
 
     val args = mutableListOf(
         "--temp-dir={tempDir}",

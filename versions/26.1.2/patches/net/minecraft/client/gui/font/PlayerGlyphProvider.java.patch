@@ -1,0 +1,22 @@
+--- a/net/minecraft/client/gui/font/PlayerGlyphProvider.java
++++ b/net/minecraft/client/gui/font/PlayerGlyphProvider.java
+@@ -25,9 +_,6 @@
+         .expireAfterAccess(PlayerSkinRenderCache.CACHE_DURATION)
+         .build(
+             new CacheLoader<FontDescription.PlayerSprite, GlyphSource>() {
+-                {
+-                    Objects.requireNonNull(PlayerGlyphProvider.this);
+-                }
+ 
+                 @Override
+                 public GlyphSource load(final FontDescription.PlayerSprite playerInfo) {
+@@ -35,9 +_,6 @@
+                     final boolean hat = playerInfo.hat();
+                     return new SingleSpriteSource(
+                         new BakedGlyph() {
+-                            {
+-                                Objects.requireNonNull(<VAR_NAMELESS_ENCLOSURE>);
+-                            }
+ 
+                             @Override
+                             public GlyphInfo info() {
