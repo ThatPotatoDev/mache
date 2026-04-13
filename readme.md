@@ -1,3 +1,6 @@
+This is a fork of [Mâché](https://github.com/PaperMC/mache) which adds patches for the client so you can modify client code directly and generate patches so you can legally distribute the modified code through patches.
+I created this because the only other way to do this kind of direct editing is through [MCP-Reborn](https://github.com/Hexeption/MCP-Reborn), which doesn't generate patches so there was no legal way to share modifications made using it.
+
 Mâché
 =====
 
