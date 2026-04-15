@@ -1,0 +1,32 @@
+--- a/net/minecraft/client/renderer/LevelEventHandler.java
++++ b/net/minecraft/client/renderer/LevelEventHandler.java
+@@ -356,10 +_,10 @@
+                 double x = pos.getX() + 0.5;
+                 double y = pos.getY();
+                 double z = pos.getZ() + 0.5;
+-                ItemParticleOption breakParticle = new ItemParticleOption(ParticleTypes.ITEM, Items.ENDER_EYE);
++                ItemParticleOption breakParticle0 = new ItemParticleOption(ParticleTypes.ITEM, Items.ENDER_EYE);
+ 
+                 for (int i = 0; i < 8; i++) {
+-                    this.level.addParticle(breakParticle, x, y, z, random.nextGaussian() * 0.15, random.nextDouble() * 0.2, random.nextGaussian() * 0.15);
++                    this.level.addParticle(breakParticle0, x, y, z, random.nextGaussian() * 0.15, random.nextDouble() * 0.2, random.nextGaussian() * 0.15);
+                 }
+ 
+                 for (double angle = 0.0; angle < Math.PI * 2; angle += Math.PI / 20) {
+@@ -387,11 +_,11 @@
+                 break;
+             case 2004:
+                 for (int i = 0; i < 20; i++) {
+-                    double x = pos.getX() + 0.5 + (random.nextDouble() - 0.5) * 2.0;
+-                    double y = pos.getY() + 0.5 + (random.nextDouble() - 0.5) * 2.0;
+-                    double z = pos.getZ() + 0.5 + (random.nextDouble() - 0.5) * 2.0;
+-                    this.level.addParticle(ParticleTypes.SMOKE, x, y, z, 0.0, 0.0, 0.0);
+-                    this.level.addParticle(ParticleTypes.FLAME, x, y, z, 0.0, 0.0, 0.0);
++                    double x0 = pos.getX() + 0.5 + (random.nextDouble() - 0.5) * 2.0;
++                    double y0 = pos.getY() + 0.5 + (random.nextDouble() - 0.5) * 2.0;
++                    double z0 = pos.getZ() + 0.5 + (random.nextDouble() - 0.5) * 2.0;
++                    this.level.addParticle(ParticleTypes.SMOKE, x0, y0, z0, 0.0, 0.0, 0.0);
++                    this.level.addParticle(ParticleTypes.FLAME, x0, y0, z0, 0.0, 0.0, 0.0);
+                 }
+                 break;
+             case 2006:
