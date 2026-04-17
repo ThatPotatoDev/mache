@@ -1,6 +1,6 @@
 --- a/com/mojang/blaze3d/vulkan/glsl/GlslCompiler.java
 +++ b/com/mojang/blaze3d/vulkan/glsl/GlslCompiler.java
-@@ -102,14 +_,14 @@
+@@ -103,14 +_,14 @@
              String namex = sampler.name();
              Optional<BindGroupLayout.UniformDescription> uniformDescriptionx = BindGroupLayout.flattenUniforms(pipeline.getBindGroupLayouts())
                  .stream()
@@ -8,7 +8,7 @@
 +                .filter(d -> d.name().equals(namex))
                  .findFirst();
              if (uniformDescriptionx.isPresent()) {
-                 if (sampler.dimensions() != 5) {
+                 if (sampler.dimensions() != Spv.SpvDimBuffer) {
                      throw new ShaderCompileException("UTB (" + namex + ") must have type of SpvDimBuffer");
                  }
  
@@ -17,7 +17,7 @@
                      entries.add(
                          new VulkanBindGroupLayout.Entry(
                              VulkanBindGroupLayout.VulkanBindGroupEntryType.TEXEL_BUFFER, namex, uniformDescriptionx.get().gpuFormat()
-@@ -125,7 +_,7 @@
+@@ -126,7 +_,7 @@
                      throw new ShaderCompileException("Sampled texture (" + namex + ") must have type of SpvDim2D or SpvDimCube");
                  }
  

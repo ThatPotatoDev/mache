@@ -8,7 +8,7 @@
 +            Uniform uniform = switch (uniformDescription.type()) {
                  case UNIFORM_BUFFER -> {
                      int index = GL31.glGetUniformBlockIndex(this.programId, uniformName);
-                     if (index == -1) {
+                     if (index == GL31.GL_INVALID_INDEX) {
 @@ -102,7 +_,6 @@
                  }
              };

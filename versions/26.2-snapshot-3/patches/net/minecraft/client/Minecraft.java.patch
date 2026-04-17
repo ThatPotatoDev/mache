@@ -9,7 +9,7 @@
  import net.minecraft.ChatFormatting;
  import net.minecraft.CrashReport;
  import net.minecraft.CrashReportCategory;
-@@ -2380,7 +_,7 @@
+@@ -2381,7 +_,7 @@
      }
  
      public CompletableFuture<Void> delayTextureReload() {
